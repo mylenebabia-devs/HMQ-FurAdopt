@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMQ FurAdopt - Home</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #a85b35;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #f9decd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #663922;
+}
+
+.nav-links a {
+  color: #5a3b28;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #a85b35;
+  text-decoration: underline;
+}
+
+.search-section {
+  text-align: center;
+  margin: 25px 0;
+}
+
+#search-bar {
+  width: 80%;
+  max-width: 600px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+}
+
+#search-bar:focus {
+  border-color: #a85b35;
+}
+
+.pets-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  padding: 0 40px 40px;
+}
+
+.pet-card {
+  background-color: #f9decd;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+}
+
+.pet-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.pet-card h3 {
+  color: #663922;
+  margin-bottom: 6px;
+}
+
+.pet-card p {
+  font-size: 14px;
+  color: #5a3b28;
+  margin-bottom: 4px;
+}
+
+.adopt-btn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #d2691e;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.adopt-btn:hover {
+  background-color: #b85c1b;
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  background-color: #f9decd;
+  color: #5a3b28;
+  padding: 15px 10px;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+footer a {
+  color: #5a3b28;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-tagline {
+  font-weight: 500;
+  font-size: 15px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+</style>
+<body>
+
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="images/paw-removebg-preview.png" alt="HMQ FurAdopt Logo" class="logo-img">
+      <span class="logo-text">HMQ FurAdopt</span>
+    </div>
+    <div class="nav-links">
+      <a href="#" id="home-link" class="active">Home</a>
+      <a href="#">Profile</a>
+      <a href="#">Adopt</a>
+      <a href="#">Logout</a>
+    </div>
+  </nav>
+
+  <section class="search-section">
+    <input type="text" id="search-bar" placeholder="Search pets by name, breed, or age...">
+  </section>
+
+  <main class="pets-section">
+    <div class="pet-card">
+      <img src="images/pet1.jpg" alt="Brown dog">
+      <h3>Buddy</h3>
+      <p>Breed: Golden Retriever</p>
+      <p>Age: 2 years</p>
+      <button class="adopt-btn">Adopt Now</button>
+    </div>
+
+    <div class="pet-card">
+      <img src="images/pet2.jpg" alt="White cat">
+      <h3>Luna</h3>
+      <p>Breed: Persian Cat</p>
+      <p>Age: 1 year</p>
+      <button class="adopt-btn">Adopt Now</button>
+    </div>
+
+    <div class="pet-card">
+      <img src="images/pet3.jpg" alt="Gray husky">
+      <h3>Shadow</h3>
+      <p>Breed: Siberian Husky</p>
+      <p>Age: 3 years</p>
+      <button class="adopt-btn">Adopt Now</button>
+    </div>
+
+    <div class="pet-card">
+      <img src="images/pet4.jpg" alt="Brown rabbit">
+      <h3>Coco</h3>
+      <p>Breed: Mini Lop</p>
+      <p>Age: 6 months</p>
+      <button class="adopt-btn">Adopt Now</button>
+    </div>
+  </main>
+
+  <footer>
+    <strong>HMQ FurAdopt</strong><br>
+    <span class="footer-tagline">Where every fur finds a family</span>
+    <div>
+      <a href="#">About Us</a> |
+      <a href="#">Contact</a> |
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Service</a>
+    </div>
+    <p>© 2025 HMQ FurAdopt. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
