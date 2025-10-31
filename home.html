@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="home.css">
 </head>
 <style>
-    * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -104,10 +104,12 @@ body {
 
 .pet-card img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: 180px;          
+  object-fit: contain;     
+  object-position: center; 
   border-radius: 12px;
   margin-bottom: 10px;
+  background-color: #f9decd; 
 }
 
 .pet-card h3 {
@@ -169,7 +171,7 @@ footer a:hover {
 
   <nav class="navbar">
     <div class="logo-container">
-      <img src="images/paw-removebg-preview.png" alt="HMQ FurAdopt Logo" class="logo-img">
+      <img src="images/hmq.png" alt="HMQ FurAdopt Logo" class="logo-img">
       <span class="logo-text">HMQ FurAdopt</span>
     </div>
     <div class="nav-links">
@@ -186,35 +188,35 @@ footer a:hover {
 
   <main class="pets-section">
     <div class="pet-card">
-      <img src="images/pet1.jpg" alt="Brown dog">
+      <img src="images/buddy.jpg" alt="golden retriever">
       <h3>Buddy</h3>
       <p>Breed: Golden Retriever</p>
-      <p>Age: 2 years</p>
-      <button class="adopt-btn">Adopt Now</button>
+      <p>Age: 3 years old</p>
+      <button class="adopt-btn">Adopt Me</button>
     </div>
 
     <div class="pet-card">
-      <img src="images/pet2.jpg" alt="White cat">
-      <h3>Luna</h3>
+      <img src="images/cotton.jpg" alt="hollan rabbit">
+      <h3>Cotton</h3>
+      <p>Breed: Hollan lop</p>
+      <p>Age: 1 year old</p>
+      <button class="adopt-btn">Adopt Me</button>
+    </div>
+
+    <div class="pet-card">
+      <img src="images/rocky.jpg" alt="beagle dog">
+      <h3>Rocky</h3>
+      <p>Breed: Beagle</p>
+      <p>Age: 4 years old</p>
+      <button class="adopt-btn">Adopt Me</button>
+    </div>
+
+    <div class="pet-card">
+      <img src="images/margarette.jpg" alt="persian cat">
+      <h3>Margarette</h3>
       <p>Breed: Persian Cat</p>
-      <p>Age: 1 year</p>
-      <button class="adopt-btn">Adopt Now</button>
-    </div>
-
-    <div class="pet-card">
-      <img src="images/pet3.jpg" alt="Gray husky">
-      <h3>Shadow</h3>
-      <p>Breed: Siberian Husky</p>
-      <p>Age: 3 years</p>
-      <button class="adopt-btn">Adopt Now</button>
-    </div>
-
-    <div class="pet-card">
-      <img src="images/pet4.jpg" alt="Brown rabbit">
-      <h3>Coco</h3>
-      <p>Breed: Mini Lop</p>
-      <p>Age: 6 months</p>
-      <button class="adopt-btn">Adopt Now</button>
+      <p>Age: 2 years old</p>
+      <button class="adopt-btn">Adopt Me</button>
     </div>
   </main>
 
