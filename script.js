@@ -7,7 +7,7 @@ if (getStartedBtn) {
 
 let users = [];
 if (localStorage.getItem("users")) {
-  users = JSON.parse(localStorage.getItem("users"));
+  users = JSON.parse(localStorage.getItem("users")); //temporary lang nia pa kay naa pay admin
 }
 
 const signupForm = document.getElementById("signupForm");
