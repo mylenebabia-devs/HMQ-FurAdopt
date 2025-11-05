@@ -76,14 +76,15 @@ body {
   font-size: 15px;
   outline: none;
 }
-
+ 
 #search-bar:focus {
   border-color: #a85b35;
-}
+} 
 
 .pets-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 230px));
+  justify-content: center; 
   gap: 25px;
   padding: 0 40px 40px;
 }
@@ -103,12 +104,12 @@ body {
 
 .pet-card img {
   width: 100%;
-  height: 180px;          
-  object-fit: contain;     
+  height: 200px;          
+  object-fit: cover;     
   object-position: center; 
   border-radius: 12px;
   margin-bottom: 10px;
-  background-color: #f9decd; 
+  background-color: #f9decd
 }
 
 .pet-card h3 {
@@ -165,6 +166,18 @@ footer a:hover {
   margin-bottom: 5px;
 }
 
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+@media (max-width: 600px) {
+  .pets-section {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
 </style>
 <body>
 
@@ -182,7 +195,7 @@ footer a:hover {
   </nav>
 
   <section class="search-section">
-    <input type="text" id="search-bar" placeholder="Search pets by name, breed, or age...">
+    <input type="text" id="search-bar" placeholder="Search name, breed, or category">
   </section>
 
   <main class="pets-section">
@@ -226,7 +239,7 @@ footer a:hover {
       <img src="images/mochi.jpg" alt="english lop">
       <h3>Mochi</h3>
       <p>Breed: English Lop</p>
-      <p>Age: 2 years old</p>
+      <p>Age: 4.5 years old</p>
       <button class="details-btn">See more details</button>
       <button class="adopt-btn">Adopt Me</button>
     </div>
@@ -293,7 +306,6 @@ footer a:hover {
       <button class="details-btn">See more details</button>
       <button class="adopt-btn">Adopt Me</button>
     </div>
-
     </main>
 
   <footer>
@@ -308,5 +320,37 @@ footer a:hover {
     <p>© 2025 HMQ FurAdopt. All rights reserved.</p>
   </footer>
 
+  <script>
+    const search = document.getElementById("search-bar");
+    const cards = document.querySelectorAll(".pet-card");
+
+    const dogs = ["dog", "beagle", "retriever"];
+    const cats = ["cat", "persian", "puspin"];
+    const rabbits = ["rabbit", "lop"];
+    const hamsters = ["hamster", "dwarf"];
+    const guineaPigs = ["guinea", "pig", "texel", "teddy"];
+    const parrots = ["parrot", "cockatoo", "quaker"];
+
+    search.addEventListener("keyup", () => {
+    let text = search.value.toLowerCase();
+
+    cards.forEach(card => {
+    let info = card.textContent.toLowerCase();
+    let breed = card.querySelector("p").textContent.toLowerCase();
+
+    let category = "";
+    if (dogs.some(word => breed.includes(word))) category = "dog";
+    else if (cats.some(word => breed.includes(word))) category = "cat";
+    else if (rabbits.some(word => breed.includes(word))) category = "rabbit";
+    else if (hamsters.some(word => breed.includes(word))) category = "hamster";
+    else if (guineaPigs.some(word => breed.includes(word))) category = "guinea pig";
+    else if (parrots.some(word => breed.includes(word))) category = "parrot";
+
+    const match = info.includes(text) || category.includes(text);
+    card.classList.toggle("hidden", !match);
+    });
+  });
+
+  </script>
 </body>
 </html>
