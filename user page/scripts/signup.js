@@ -1,17 +1,4 @@
-let users = JSON.parse(localStorage.getItem("users")) || [
-  {
-    role: "admin",
-    username: "admin123",
-    email: "admin@furadopt.com",
-    password: "adminpass123"
-  },
-  {
-    role: "user",
-    username: "mylenebabia2005",
-    email: "mylenesalise17@gmail.com",
-    password: "mylenebabia123"
-  }
-];
+let users = JSON.parse(localStorage.getItem("users")) || [];
 
 const signupForm = document.getElementById("signupForm");
 

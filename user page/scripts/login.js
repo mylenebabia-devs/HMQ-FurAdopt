@@ -20,10 +20,10 @@ if (loginForm) {
 
     if (user.role === "admin") {
       alert(`Welcome Admin, ${user.username}!`);
-      window.location.href = "admin-home.html";
+      window.location.href = "../admin page/home.html";
     } else {
       alert(`Welcome back, ${user.username}!`);
-      window.location.href = "user-home.html";
+      window.location.href = "../user page/home.html";
     }
   });
 }
