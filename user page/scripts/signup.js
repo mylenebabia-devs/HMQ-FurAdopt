@@ -42,17 +42,19 @@ if (signupForm) {
   });
 }
 
-const togglePasswordIcons = document.querySelectorAll(".toggle-password");
-
-togglePasswordIcons.forEach(icon => {
+document.querySelectorAll(".toggle-password").forEach(icon => {
   icon.addEventListener("click", function () {
-    const input = this.previousElementSibling;
+    const wrapper = this.closest(".input-wrapper");
+    const input = wrapper.querySelector("input");
+
     if (input.type === "password") {
-      input.type = "text";
+      input.setAttribute("type", "text");
       this.src = "images/show.png";
+      this.alt = "Hide password";
     } else {
-      input.type = "password";
+      input.setAttribute("type", "password");
       this.src = "images/hide.png";
+      this.alt = "Show password";
     }
   });
 });
