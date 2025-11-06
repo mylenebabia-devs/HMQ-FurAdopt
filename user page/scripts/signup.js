@@ -1,16 +1,20 @@
-const getStartedBtn = document.getElementById("getStartedBtn");
-if (getStartedBtn) {
-  getStartedBtn.addEventListener("click", () => {
-    window.location.href = "login.html";
-  });
-}
-
-let users = [];
-if (localStorage.getItem("users")) {
-  users = JSON.parse(localStorage.getItem("users")); //temporary lang nia pa kay naa pay admin
-}
+let users = JSON.parse(localStorage.getItem("users")) || [
+  {
+    role: "admin",
+    username: "admin123",
+    email: "admin@furadopt.com",
+    password: "adminpass123"
+  },
+  {
+    role: "user",
+    username: "mylenebabia2005",
+    email: "mylenesalise17@gmail.com",
+    password: "mylenebabia123"
+  }
+];
 
 const signupForm = document.getElementById("signupForm");
+
 if (signupForm) {
   signupForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -36,44 +40,23 @@ if (signupForm) {
       return;
     }
 
-    const newUser = { username, email, password };
+    const newUser = {
+      role: "user",
+      username,
+      email,
+      password
+    };
+
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
 
     alert("Account created successfully!");
-    window.location.href = "login.html"; 
-  });
-}
-
-const loginForm = document.getElementById("loginForm");
-if (loginForm) {
-  loginForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const emailOrUsername = document.getElementById("loginEmail").value.trim();
-    const password = document.getElementById("loginPassword").value;
-
-    const user = users.find(
-      u => u.email === emailOrUsername || u.username === emailOrUsername
-    );
-
-    if (!user) {
-      alert("User not found. Please sign up if you don't have an account.");
-      return;
-
-    }
-
-    if (user.password !== password) {
-      alert("Incorrect password.");
-      return;
-    }
-
-    alert(`Welcome back, ${user.username}!`);
-    window.location.href = "home.html"; 
+    window.location.href = "login.html";
   });
 }
 
 const togglePasswordIcons = document.querySelectorAll(".toggle-password");
+
 togglePasswordIcons.forEach(icon => {
   icon.addEventListener("click", function () {
     const input = this.previousElementSibling;

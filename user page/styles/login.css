@@ -14,8 +14,7 @@ body {
   min-height: 100vh;
 }
 
-.main-container,
-.wrapper {
+.main-container {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -50,12 +49,6 @@ h1 {
   color: #663922;
   margin-bottom: 15px;
   font-size: 28px;
-}
-
-.subtitle {
-  font-size: 16px;
-  color: #5a3b28;
-  margin-bottom: 25px;
 }
 
 label {
@@ -226,41 +219,6 @@ footer a:hover {
   margin-bottom: 5px;
 }
 
-.checkbox-group {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin: 15px 0;
-}
-
-.checkbox-label {
-  font-size: 14px;
-  color: #663922;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.checkbox-label input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  accent-color: #d2691e;
-  cursor: pointer;
-  margin: 0;
-}
-
-.back-button {
-  display: inline-block;
-  margin-bottom: 15px;
-  font-size: 14px;
-  color: #a85b35;
-  text-decoration: none;
-}
-
-.back-button:hover {
-  text-decoration: underline;
-}
-
 @media (max-width: 600px) {
   .card {
     padding: 30px 20px;
@@ -280,8 +238,5 @@ footer a:hover {
 @media (max-width: 350px) {
   h1 {
     font-size: 20px;
-  }
-  .subtitle {
-    font-size: 13px;
   }
 }
