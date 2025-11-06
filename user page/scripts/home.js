@@ -33,6 +33,11 @@ function displayPets(petList) {
       <button class="adopt-btn">Adopt Me</button>
     `;
     petsContainer.appendChild(card);
+
+    card.querySelector(".adopt-btn").addEventListener("click", () => {
+      localStorage.setItem("selectedPet", JSON.stringify(pet));
+      window.location.href = "adoption-form.html";
+    });
   });
 }
 

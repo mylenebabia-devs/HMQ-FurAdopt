@@ -1,4 +1,3 @@
-// Retrieve selected pet data from localStorage (if clicked from home page)
 const pet = JSON.parse(localStorage.getItem("selectedPet"));
 
 if (pet) {
@@ -17,24 +16,26 @@ form.addEventListener("submit", (e) => {
 
   const application = {
     petName: pet ? pet.name : "Unknown",
-    fullName: form.fullName.value,
-    age: form.age.value,
-    email: form.email.value,
-    phone: form.phone.value,
-    address: form.address.value,
-    occupation: form.occupation.value,
+    fullName: form.fullName.value.trim(),
+    age: form.age.value.trim(),
+    email: form.email.value.trim(),
+    phone: form.phone.value.trim(),
+    address: form.address.value.trim(),
+    occupation: form.occupation.value.trim(),
     homeType: form.homeType.value,
     houseType: form.houseType.value,
     otherPets: form.otherPets.value,
-    reason: form.reason.value,
-    carePlan: form.carePlan.value,
+    reason: form.reason.value.trim(),
+    carePlan: form.carePlan.value.trim(),
     dateSubmitted: new Date().toLocaleString(),
   };
 
   applications.push(application);
   localStorage.setItem("adoptionApplications", JSON.stringify(applications));
 
-  alert("Your adoption application has been submitted successfully! 🐾");
+  alert(`Your adoption application for ${application.petName} has been submitted successfully! 🐾`);
+  
   form.reset();
+  localStorage.removeItem("selectedPet"); 
   window.location.href = "home.html";
 });
