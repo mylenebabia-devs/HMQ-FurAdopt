@@ -5,7 +5,10 @@
 }
 
 body {
-  background-color: #a85b35;
+  background-image: url(../images/pet.jpg);
+  background-size: cover; /* para sakto jud sa screen */
+  background-repeat: no-repeat; /* para dili mo repeat */
+  background-position: center; /* para centered ang image */
   font-family: "Poppins", sans-serif;
   color: #333;
   display: flex;
@@ -13,6 +16,7 @@ body {
   justify-content: space-between;
   min-height: 100vh;
 }
+
 
 .main-container {
   flex: 1;
