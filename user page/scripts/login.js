@@ -25,7 +25,6 @@ if (loginForm) {
       window.location.href = "../admin page/home.html";
     } else {
       alert(`Welcome, ${user.username}!`);
-      // 🔽 Redirect user directly to the adoption form instead of home
       window.location.href = "../user page/adoption-form.html";
     }
   });

@@ -34,10 +34,10 @@
         `;
         petsContainer.appendChild(card);
 
-        // UPDATED: adopt goes to login.html
+        // goes to signup
         card.querySelector(".adopt-btn").addEventListener("click", () => {
           localStorage.setItem("selectedPet", JSON.stringify(pet));
-          window.location.href = "login.html";
+          window.location.href = "signup.html";
         });
       });
     }

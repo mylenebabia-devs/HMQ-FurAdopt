@@ -59,7 +59,7 @@ body {
   text-decoration: underline;
 }
 
-/* SPLIT LAYOUT */
+
 .split-page {
   display: flex;
   gap: 25px;
@@ -67,7 +67,7 @@ body {
   flex: 1;
 }
 
-/* LEFT SECTION (PET PREVIEW) */
+
 .pet-preview {
   flex: 1;
   background-color: #f9decd;
@@ -107,7 +107,7 @@ body {
   font-size: 15px;
 }
 
-/* RIGHT SECTION (FORM CARD) */
+
 .form-card {
   flex: 2;
   background-color: #f9decd;
@@ -174,7 +174,6 @@ textarea {
   background-color: #4b2e15;
 }
 
-/* FOOTER */
 footer {
   background-color: #f9decd;
   text-align: center;
@@ -201,7 +200,7 @@ footer a:hover {
   color: #663922;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 900px) {
   .split-page {
     flex-direction: column;
