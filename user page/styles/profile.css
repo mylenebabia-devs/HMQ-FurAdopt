@@ -65,11 +65,11 @@ body {
 .profile-card {
   background-color: #f9decd;
   border-radius: 15px;
-  padding: 25px 35px;
+  padding: 25px 30px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 420px;
+  max-width: 400px;
 }
 
 .profile-card h1 {

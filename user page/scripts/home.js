@@ -1,6 +1,6 @@
-const pets = [
+   const pets = [
   { name: "Buddy", breed: "Golden Retriever", age: "3 years old", image: "images/buddy.jpg", type: "dog" },
-  { name: "Cotton", breed: "Hollan Lop", age: "1 year old", image: "images/cotton.jpg", type: "rabbit" },
+  { name: "Cotton", breed: "Holland Lop", age: "1 year old", image: "images/cotton.jpg", type: "rabbit" },
   { name: "Rocky", breed: "Beagle", age: "4 years old", image: "images/rocky.jpg", type: "dog" },
   { name: "Margarette", breed: "Persian Cat", age: "2 years old", image: "images/margarette.jpg", type: "cat" },
   { name: "Mochi", breed: "English Lop", age: "4.5 years old", image: "images/mochi.jpg", type: "rabbit" },
@@ -11,8 +11,25 @@ const pets = [
   { name: "Winter", breed: "White Dwarf Hamster", age: "2 years old", image: "images/winter.png", type: "hamster" },
   { name: "Muffin", breed: "Teddy Guinea Pig", age: "1 year old", image: "images/muffin.png", type: "guinea pig" },
   { name: "Maggie", breed: "Texel Guinea Pig", age: "9 months old", image: "images/maggie.png", type: "guinea pig" },
-];
 
+  { name: "Bruno", breed: "Rottweiler", age: "3 years old", image: "images/bruno.jpg", type: "dog" },
+  { name: "Choco", breed: "Aspin", age: "2 years old", image: "images/choco.jpg", type: "dog" },
+  { name: "Tisay", breed: "Shih Tzu", age: "1 year old", image: "images/tisay.jpg", type: "dog" },
+  { name: "Bunso", breed: "Syrian Hamster", age: "4 months old", image: "images/bunso.jpg", type: "hamster" },
+  { name: "Tala", breed: "Winter White Hamster", age: "4 months old", image: "images/tala.jpg", type: "hamster" },
+  { name: "Luna", breed: "Dwarf Hamster", age: "3 months old", image: "images/luna.jpg", type: "hamster" },
+  { name: "Tonton", breed: "Mini Rex", age: "5 months old", image: "images/tonton.jpg", type: "rabbit" },
+  { name: "Nene", breed: "Mini Lop", age: "4 months old", image: "images/nene.jpg", type: "rabbit" },
+  { name: "Inday", breed: "Dutch Rabbit", age: "6 months old", image: "images/inday.jpg", type: "rabbit" },
+  { name: "Sunny", breed: "Sun Conure", age: "2 years old", image: "images/sunny.jpg", type: "parrot" },
+  { name: "Mango", breed: "Budgie", age: "1 year old", image: "images/mango.jpg", type: "parrot" },
+  { name: "Tuki", breed: "Amazon Parrot", age: "5 years old", image: "images/tuki.jpg", type: "parrot" },
+  { name: "Bubu", breed: "American Guinea Pig", age: "1 year old", image: "images/bubu.jpg", type: "guinea pig" },
+  { name: "Pochi", breed: "Teddy Guinea Pig", age: "1 year old", image: "images/pochi.jpg", type: "guinea pig" },
+  { name: "Bubbles", breed: "Ragdoll", age: "1 year old", image: "images/bubbles.jpg", type: "cat" },
+  { name: "Boots", breed: "American Short Hair", age: "9 months old", image: "images/boots.jpg", type: "cat" },
+  { name: "Chilly", breed: "Devon Rex", age: "1 year 3 months old", image: "images/chilly.jpg", type: "cat" },
+]
 const petsContainer = document.getElementById("pets-container");
 const search = document.getElementById("search-bar");
 const filterIcon = document.getElementById("filter-icon");
