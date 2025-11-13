@@ -25,33 +25,84 @@ body {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
 }
 
 .logo-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.logo-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .logo-text {
-  font-size: 20px;
+  font-size: 28px;
   font-weight: bold;
   color: #663922;
+  line-height: 1.1;
+}
+
+.logo-tagline {
+  font-size: 16px;
+  color: #a85b35;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .nav-links a {
-  color: #5a3b28;
+  background-color: #FFFFFF;
+  color: #663922;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
   text-decoration: none;
-  margin-left: 25px;
-  font-weight: 500;
+  transition: 0.3s;
+  display: inline-block;
 }
 
-.nav-links a:hover,
+.nav-links a:hover {
+  background-color: #F5F5F5;
+}
+
 .nav-links a.active {
-  color: #a85b35;
-  text-decoration: underline;
+  background-color: #d2691e;
+  color: #FFFFFF;
+}
+
+.nav-links a.active:hover {
+  background-color: #b85c1b;
+  transform: scale(1.02);
+}
+
+.btn-upload {
+  background-color: #d2691e;
+  color: #FFFFFF;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-upload:hover {
+  background-color: #b85c1b;
+  transform: scale(1.02);
 }
 
 .main-container {

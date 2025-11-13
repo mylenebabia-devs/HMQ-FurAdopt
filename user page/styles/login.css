@@ -36,18 +36,20 @@ body {
 .logo-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .logo-img {
-  width: 120px;
+  width: 70px;
   height: auto;
-  border-radius: 50%;
+  object-fit: contain;
+  border-radius: 0;
 }
 
 h1 {
   color: #663922;
   margin-bottom: 15px;
+  margin-top: 5px;
   font-size: 28px;
 }
 

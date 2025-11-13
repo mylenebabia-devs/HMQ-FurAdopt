@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMQ FurAdoption - Home</title>
+  <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="../images/hmq-logo.png" alt="HMQ Logo" class="logo-img">
+      <div class="logo-text-container">
+        <span class="logo-text">HMQ FurAdoption</span>
+        <span class="logo-tagline">Where every fur finds a family.</span>
+      </div>
+    </div>
+    <div class="nav-right" id="nav-right">
+      <a href="login.html" class="btn-login" id="login-link">Log In</a>
+      <a href="signup.html" class="btn-signup" id="signup-link">Sign Up</a>
+      <div class="nav-links" id="logged-in-nav" style="display: none;">
+        <a href="index.html" class="active">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" id="logout-link">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <h1 class="hero-title">Find Your Perfect Furry Friend</h1>
+    <p class="hero-tagline">Every pet deserves a loving home. Browse our adorable companions waiting to meet you!</p>
+  </section>
+
+  <section class="search-section">
+    <div class="search-wrapper">
+      <div class="search-row">
+        <div class="search-container">
+          <img src="../images/searchicon.png" class="search-icon" alt="Search">
+          <input type="text" id="search-bar" placeholder="Search by name, breed, or description...">
+        </div>
+        <button class="available-only-btn" id="filterBtn">
+          <img src="../images/filter.png" alt="Filter" class="filter-icon-small">
+          Filter
+        </button>
+      </div>
+      <div class="category-filters">
+        <button class="category-btn active" data-filter="all">All</button>
+        <button class="category-btn" data-filter="dog">Dog</button>
+        <button class="category-btn" data-filter="cat">Cat</button>
+        <button class="category-btn" data-filter="rabbit">Rabbit</button>
+        <button class="category-btn" data-filter="hamster">Hamster</button>
+        <button class="category-btn" data-filter="bird">Bird</button>
+        <button class="category-btn" data-filter="other">Other</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="pets-section" id="pets-container"></main>
+
+  <footer>
+    <strong>HMQ FurAdopt</strong><br>
+    <span class="footer-tagline">Where every fur finds a family</span>
+    <div>
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Service</a>
+    </div>
+    <p>© 2025 HMQ FurAdoption. All rights reserved.</p>
+  </footer>
+  <script src="../scripts/pet.js"></script>
+  <script src="../scripts/modal.js"></script>
+  <script src="../scripts/index.js"></script>
+</body>
+</html>
+

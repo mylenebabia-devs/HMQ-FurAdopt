@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Pets - Admin Panel</title>
+  <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="../../user page/images/hmq-logo.png" alt="HMQ Logo" class="logo-img">
+      <div class="logo-text-container">
+        <span class="logo-text">HMQ FurAdoption</span>
+        <span class="logo-tagline">Admin Panel</span>
+      </div>
+    </div>
+    <div class="nav-right">
+      <span class="admin-badge">Admin</span>
+      <button class="btn-logout" id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <div class="admin-container">
+    <aside class="sidebar">
+      <a href="dashboard.html" class="sidebar-btn" data-page="dashboard.html">
+        <span>📊</span> Dashboard
+      </a>
+      <a href="pets.html" class="sidebar-btn active" data-page="pets.html">
+        <span>🐾</span> Manage Pets
+      </a>
+      <a href="adoptions.html" class="sidebar-btn" data-page="adoptions.html">
+        <span>📋</span> Adoption Forms
+      </a>
+      <a href="users.html" class="sidebar-btn" data-page="users.html">
+        <span>👥</span> Users
+      </a>
+    </aside>
+
+    <main class="admin-content">
+      <div class="section-header">
+        <h1>Manage Pets</h1>
+        <button class="btn-primary" id="addPetBtn">+ Add New Pet</button>
+      </div>
+      <div id="petsList" class="pets-grid"></div>
+    </main>
+  </div>
+
+  <!-- Add Pet Modal -->
+  <div id="addPetModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Add New Pet</h2>
+      <form id="addPetForm">
+        <div class="form-grid">
+          <div class="input-group">
+            <label>Name *</label>
+            <input type="text" id="petName" required>
+          </div>
+          <div class="input-group">
+            <label>Breed *</label>
+            <input type="text" id="petBreed" required>
+          </div>
+          <div class="input-group">
+            <label>Age *</label>
+            <input type="text" id="petAge" required>
+          </div>
+          <div class="input-group">
+            <label>Type *</label>
+            <select id="petType" required>
+              <option value="">Select type</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+              <option value="rabbit">Rabbit</option>
+              <option value="hamster">Hamster</option>
+              <option value="bird">Bird</option>
+              <option value="guinea pig">Guinea Pig</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>Gender</label>
+            <select id="petGender">
+              <option value="">Not specified</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>Size</label>
+            <select id="petSize">
+              <option value="">Not specified</option>
+              <option value="Small">Small</option>
+              <option value="Medium">Medium</option>
+              <option value="Large">Large</option>
+            </select>
+          </div>
+          <div class="input-group full-width">
+            <label>Pet Image *</label>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <input type="file" id="petImageUpload" accept="image/*" style="display: none;">
+                <button type="button" id="uploadPetImageBtn" class="btn-secondary" style="padding: 8px 16px;">Choose Image</button>
+                <span id="petImageFileName" style="color: #666; font-size: 14px;"></span>
+              </div>
+              <div id="petImagePreview" style="display: none; margin-top: 10px;">
+                <img id="petImagePreviewImg" src="" alt="Preview" style="max-width: 200px; max-height: 200px; border-radius: 8px; border: 2px solid #e0c1a1; object-fit: cover;">
+              </div>
+            </div>
+          </div>
+          <div class="input-group full-width">
+            <label>Description *</label>
+            <textarea id="petDescription" required></textarea>
+          </div>
+          <div class="input-group full-width">
+            <label>Traits (comma-separated)</label>
+            <input type="text" id="petTraits" placeholder="Friendly, Energetic, Loyal">
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn-secondary" id="cancelPetBtn">Cancel</button>
+          <button type="submit" class="btn-primary">Add Pet</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../../user page/scripts/modal.js"></script>
+  <script src="../scripts/admin-common.js"></script>
+  <script src="../scripts/pets.js"></script>
+</body>
+</html>
+

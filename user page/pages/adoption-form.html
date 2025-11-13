@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adoption Form - HMQ FurAdoption</title>
+  <link rel="stylesheet" href="../styles/adoption-form.css">
+</head>
+<body>
+
+  <main>
+    <div class="back-button-container">
+      <button id="backBtn" class="back-btn">
+        <img src="../images/arrow-left-icon.png" alt="Back"> Back to Home
+      </button>
+    </div>
+    <div class="split-page">
+      <section class="pet-preview">
+        <h2>Your Selected Pet</h2>
+        <div class="pet-box">
+          <div class="pet-image-wrapper">
+            <img src="../images/pet.jpg" id="petPreviewImage" alt="Selected Pet">
+            <span class="pet-type-badge" id="petPreviewType">Type</span>
+          </div>
+          <h3 id="petPreviewName">Pet Name</h3>
+          <div class="pet-info-grid">
+            <div class="info-item">
+              <span class="info-label">Breed</span>
+              <span class="info-value" id="petPreviewBreed">-</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Age</span>
+              <span class="info-value" id="petPreviewAge">-</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Gender</span>
+              <span class="info-value" id="petPreviewGender">-</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Size</span>
+              <span class="info-value" id="petPreviewSize">-</span>
+            </div>
+          </div>
+          <div class="pet-description-section">
+            <p class="description-label">About</p>
+            <p class="description-text" id="petPreviewDescription">-</p>
+          </div>
+          <div class="pet-traits-section">
+            <p class="traits-label">Personality</p>
+            <div class="traits-container" id="petPreviewTraits"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-card">
+        <div class="form-header">
+          <h1>Pet Adoption Application</h1>
+          <p class="form-desc">
+            Please fill out this form completely to help us ensure a suitable match for you and the pet.
+          </p>
+        </div>
+
+        <form id="adoptionForm">
+
+          <div class="section">
+            <div class="section-header">
+              <span class="section-icon">👤</span>
+              <h2>Personal Information</h2>
+            </div>
+            <div class="form-grid">
+              <div class="input-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter your full name" required>
+              </div>
+              <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="your.email@example.com" required>
+              </div>
+              <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" placeholder="09123456789" required>
+              </div>
+              <div class="input-group full-width">
+                <label for="address">Home Address</label>
+                <input type="text" id="address" placeholder="Complete address" required>
+              </div>
+              <div class="input-group">
+                <label for="occupation">Occupation</label>
+                <input type="text" id="occupation" placeholder="Your occupation (optional)">
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <span class="section-icon">🏠</span>
+              <h2>Home Information</h2>
+            </div>
+            <div class="form-grid">
+              <div class="input-group">
+                <label for="homeType">Do you own or rent your home?</label>
+                <select id="homeType" required>
+                  <option value="">Select one</option>
+                  <option value="own">Own</option>
+                  <option value="rent">Rent</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label for="houseType">Type of Home</label>
+                <select id="houseType" required>
+                  <option value="">Select type</option>
+                  <option>House</option>
+                  <option>Apartment</option>
+                  <option>Farm</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label for="otherPets">Do you have other pets?</label>
+                <select id="otherPets">
+                  <option value="no">No</option>
+                  <option value="yes">Yes</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <span class="section-icon">💭</span>
+              <h2>Motivation & Care Plan</h2>
+            </div>
+            <div class="input-group">
+              <label for="reason">Why do you want to adopt this pet?</label>
+              <textarea id="reason" placeholder="Tell us about your motivation for adopting..." required></textarea>
+            </div>
+            <div class="input-group">
+              <label for="carePlan">How will you take care of this pet?</label>
+              <textarea id="carePlan" placeholder="Describe your care plan and daily routine..." required></textarea>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <span class="section-icon">📋</span>
+              <h2>Adoption Agreement</h2>
+            </div>
+            <div class="agreement-box">
+              <label class="agreement-checkbox">
+                <input type="checkbox" required> 
+                <span>I agree to provide proper food, shelter, and medical care.</span>
+              </label>
+
+              <label class="agreement-checkbox">
+                <input type="checkbox" required>
+                <span>I understand that adopting a pet is a long-term responsibility.</span>
+              </label>
+              
+              <label class="agreement-checkbox">
+                <input type="checkbox" required> 
+                <span>I agree to contact HMQ FurAdopt if I can no longer care for this pet.</span>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <strong>HMQ FurAdopt</strong><br>
+    <span class="footer-tagline">Where every fur finds a family</span>
+    <div>
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Service</a>
+    </div>
+    <p>© 2025 HMQ FurAdoption. All rights reserved.</p>
+  </footer>
+
+  <script src="../scripts/modal.js"></script>
+  <script src="../scripts/adoption-form.js"></script>
+</body>
+</html>
+

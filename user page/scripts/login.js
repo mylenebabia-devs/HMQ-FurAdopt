@@ -9,6 +9,21 @@ if (loginForm) {
     const emailOrUsername = document.getElementById("loginEmail").value.trim();
     const password = document.getElementById("loginPassword").value;
 
+    // Check for admin login
+    if (emailOrUsername === "admin@hmqfa.com" && password === "admin12345") {
+      const adminUser = {
+        role: "admin",
+        email: "admin@hmqfa.com",
+        username: "admin",
+        fullName: "Admin"
+      };
+      localStorage.setItem("currentUser", JSON.stringify(adminUser));
+      showModal("Welcome Admin!", "success", () => {
+        window.location.href = "/admin page/pages/dashboard.html";
+      });
+      return;
+    }
+
     const user = users.find(
       u =>
         (u.email === emailOrUsername || u.username === emailOrUsername) &&
@@ -16,16 +31,21 @@ if (loginForm) {
     );
 
     if (!user) {
-      alert("Incorrect username, email, or password.");
+      showModal("Incorrect username, email, or password.");
       return;
     }
 
+    // Save current logged-in user to localStorage
+    localStorage.setItem("currentUser", JSON.stringify(user));
+
     if (user.role === "admin") {
-      alert(`Welcome Admin, ${user.username}!`);
-      window.location.href = "../admin page/home.html";
+      showModal(`Welcome Admin, ${user.username}!`, "success", () => {
+        window.location.href = "/admin page/pages/dashboard.html";
+      });
     } else {
-      alert(`Welcome, ${user.username}!`);
-      window.location.href = "../user page/adoption-form.html";
+      showModal(`Welcome, ${user.username}!`, "success", () => {
+        window.location.href = "index.html";
+      });
     }
   });
 }
@@ -37,11 +57,11 @@ document.querySelectorAll(".toggle-password").forEach(icon => {
 
     if (input.type === "password") {
       input.type = "text";
-      this.src = "images/show.png";
+      this.src = "../images/show.png";
       this.alt = "Hide password";
     } else {
       input.type = "password";
-      this.src = "images/hide.png";
+      this.src = "../images/hide.png";
       this.alt = "Show password";
     }
   });

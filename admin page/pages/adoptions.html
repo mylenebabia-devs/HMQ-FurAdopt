@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adoption Forms - Admin Panel</title>
+  <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="../../user page/images/hmq-logo.png" alt="HMQ Logo" class="logo-img">
+      <div class="logo-text-container">
+        <span class="logo-text">HMQ FurAdoption</span>
+        <span class="logo-tagline">Admin Panel</span>
+      </div>
+    </div>
+    <div class="nav-right">
+      <span class="admin-badge">Admin</span>
+      <button class="btn-logout" id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <div class="admin-container">
+    <aside class="sidebar">
+      <a href="dashboard.html" class="sidebar-btn" data-page="dashboard.html">
+        <span>📊</span> Dashboard
+      </a>
+      <a href="pets.html" class="sidebar-btn" data-page="pets.html">
+        <span>🐾</span> Manage Pets
+      </a>
+      <a href="adoptions.html" class="sidebar-btn active" data-page="adoptions.html">
+        <span>📋</span> Adoption Forms
+      </a>
+      <a href="users.html" class="sidebar-btn" data-page="users.html">
+        <span>👥</span> Users
+      </a>
+    </aside>
+
+    <main class="admin-content">
+      <h1>Adoption Forms</h1>
+      <div class="filter-tabs">
+        <button class="tab-btn active" data-status="all">All</button>
+        <button class="tab-btn" data-status="pending">Pending</button>
+        <button class="tab-btn" data-status="approved">Approved</button>
+        <button class="tab-btn" data-status="rejected">Rejected</button>
+      </div>
+      <div id="adoptionsList" class="adoptions-list"></div>
+    </main>
+  </div>
+
+  <!-- View Adoption Modal -->
+  <div id="viewAdoptionModal" class="modal">
+    <div class="modal-content large">
+      <span class="close">&times;</span>
+      <h2>Adoption Application Details</h2>
+      <div id="adoptionDetails"></div>
+      <div class="modal-actions" id="adoptionActions"></div>
+    </div>
+  </div>
+
+  <script src="../../user page/scripts/modal.js"></script>
+  <script src="../scripts/admin-common.js"></script>
+  <script src="../scripts/adoptions.js"></script>
+</body>
+</html>
+
