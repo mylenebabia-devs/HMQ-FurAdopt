@@ -4,7 +4,7 @@ function checkAdminAuth() {
   const currentUser = currentUserStr ? JSON.parse(currentUserStr) : null;
 
   if (!currentUser || currentUser.role !== "admin") {
-    showModal("Access denied. Admin only.", "info", () => {
+    showModal("Access denied. Admin only.", "error", () => {
       window.location.href = "../user page/pages/login.html";
     });
     return false;

@@ -31,7 +31,7 @@ if (loginForm) {
     );
 
     if (!user) {
-      showModal("Incorrect username, email, or password.");
+      showModal("Incorrect username, email, or password.", "error");
       return;
     }
 

@@ -232,26 +232,26 @@ if (signupForm) {
 
     if (!birthday) {
       addErrorStyle(document.getElementById("signupBirthday"));
-      showModal("Please enter your birthday.");
+      showModal("Please enter your birthday.", "error");
       hasErrors = true;
     } else {
       const age = calculateAge(birthday);
       if (age < 18) {
         addErrorStyle(document.getElementById("signupBirthday"));
-        showModal("You must be 18 years or older to sign up.");
+        showModal("You must be 18 years or older to sign up.", "error");
         hasErrors = true;
       }
     }
 
     if (password.length < 8) {
       addErrorStyle(document.getElementById("signupPassword"));
-      showModal("Password must be at least 8 characters.");
+      showModal("Password must be at least 8 characters.", "error");
       hasErrors = true;
     }
 
     if (password !== confirmPassword) {
       addErrorStyle(document.getElementById("confirmPassword"));
-      showModal("Passwords do not match.");
+      showModal("Passwords do not match.", "error");
       hasErrors = true;
     }
 
@@ -259,7 +259,7 @@ if (signupForm) {
       if (!barangay) addErrorStyle(document.getElementById("signupBarangay"));
       if (!municipality) addErrorStyle(document.getElementById("signupMunicipality"));
       if (!province) addErrorStyle(document.getElementById("signupProvince"));
-      showModal("Please complete your address information.");
+      showModal("Please complete your address information.", "error");
       hasErrors = true;
     }
 
@@ -276,7 +276,7 @@ if (signupForm) {
       if (existingUser.username === username) {
         addErrorStyle(document.getElementById("signupUsername"));
       }
-      showModal("Email or username is already registered.");
+      showModal("Email or username is already registered.", "error");
       return;
     }
 
