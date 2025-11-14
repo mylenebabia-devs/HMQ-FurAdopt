@@ -73,7 +73,7 @@ if (!currentUser) {
       const file = e.target.files[0];
       if (file) {
         if (file.size > 2 * 1024 * 1024) {
-          showModal("Image size must be less than 2MB.");
+          showModal("Image size must be less than 2MB.", "error");
           return;
         }
         const reader = new FileReader();
